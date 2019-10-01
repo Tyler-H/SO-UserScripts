@@ -1,3 +1,5 @@
+/* Apply to URL: https://stackoverflow.com/questions/ask */
+
 body.bg-black-050 {
     background: #242729 !important;
 }
