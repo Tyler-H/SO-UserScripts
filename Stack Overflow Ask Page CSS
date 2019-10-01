@@ -1,0 +1,28 @@
+body.bg-black-050 {
+    background: #242729 !important;
+}
+div.container.bg-black-050, #content {
+    background: #242729 !important;
+}
+#content {
+    margin-left: 0px;
+}
+.wide\:bg-image-ask-v2 {
+    background-image: none;
+    height: inherit;
+}
+#content > div.grid > div.fs-headline1 {
+    color: transparent;
+}
+#content > div.grid > div.fs-headline1::after {
+    content:"Ask a Question";
+    color: #fafafb;
+    position: relative;
+    left: -50%;
+}
+form > div.js-show-on-question-only.js-show-on-question-and-answer {
+    display: none;
+}
+footer#footer {
+    background: black;
+}
