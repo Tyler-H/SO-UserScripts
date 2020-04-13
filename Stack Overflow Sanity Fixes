@@ -1,4 +1,3 @@
-/* Add these CSS styles to URLs on the domain for stackoverflow.com & stackexchange.com to apply to SO and most SE sites/meta sites */
 /* link fix */
 #content a {
     text-decoration: none !important;
@@ -17,6 +16,7 @@ header.top-bar {
     border-top: none !important;
 }
 
+/* -- flag modal and close modal sections below -- */
 /* revert the flag submit button to the right side where it belongs */
 div#popup-flag-post form div.popup-actions span {
     order: 1;
@@ -44,4 +44,17 @@ div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc::before
 }
 div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc {
     visibility: hidden;
+}
+
+/* revert the close vote button to the right side where it belongs */
+div#popup-close-question form div.popup-actions span {
+    order: 1;
+    margin-left: 0px !important;
+}
+div#popup-close-question form div.popup-actions button.js-popup-submit {
+    order: 2;
+    margin-left: 407px;
+}
+div#popup-close-question form div.popup-actions button.js-popup-close {
+    order: 3;
 }
