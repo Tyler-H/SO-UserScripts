@@ -1,3 +1,6 @@
+/* -- in Stylus or another user styles addon, apply these styles to URLs on the domain of stackoverflow.com & stackexchange.com
+      to cover SO and most SE/meta sites. -- */
+
 /* link fix */
 #content a {
     text-decoration: none !important;
@@ -53,8 +56,14 @@ div#popup-close-question form div.popup-actions span {
 }
 div#popup-close-question form div.popup-actions button.js-popup-submit {
     order: 2;
-    margin-left: 407px;
+    margin-left: 400px;
 }
 div#popup-close-question form div.popup-actions button.js-popup-close {
     order: 3;
+}
+div#popup-close-question form span[title="number of votes already cast"] {
+    background-color: var(--blue-500);
+    color: white;
+    font-weight: bold;
+    border: none;
 }
