@@ -20,50 +20,60 @@ header.top-bar {
 }
 
 /* -- flag modal and close modal sections below -- */
-/* revert the flag submit button to the right side where it belongs */
-div#popup-flag-post form div.popup-actions span {
-    order: 1;
-    margin-left: 0px !important;
-}
-div#popup-flag-post form div.popup-actions button.js-popup-submit {
-    order: 2;
-    margin-left: 330px;
-}
-div#popup-flag-post form div.popup-actions button.js-popup-close {
-    order: 3;
-}
-
-/* revert the flag modal "needs improvement" nonsense to an accurate message */
-div#popup-flag-post form ul.action-list li:nth-child(3) span.action-name::before {
-    visibility: visible;
-    content: "should be closed";
-}
-div#popup-flag-post form ul.action-list li:nth-child(3) span.action-name {
-    visibility: hidden;
-}
-div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc::before {
-    visibility: visible;
-    content: "This question should be closed in its current state for one reason or another.";
-}
-div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc {
-    visibility: hidden;
-}
-
-/* revert the close vote button to the right side where it belongs */
+/* revert close votes remaining and submit vote/cancel button position*/
 div#popup-close-question form div.popup-actions span {
     order: 1;
-    margin-left: 0px !important;
+    flex: 1 1 auto;
+    text-align: left;
 }
 div#popup-close-question form div.popup-actions button.js-popup-submit {
     order: 2;
-    margin-left: 400px;
 }
 div#popup-close-question form div.popup-actions button.js-popup-close {
     order: 3;
 }
+/* revert the removal of color from number of existing close votes per reason */
 div#popup-close-question form span[title="number of votes already cast"] {
     background-color: var(--blue-500);
     color: white;
     font-weight: bold;
     border: none;
+}
+div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label::before {
+    content: "Off-Topic";
+    visibility: visible;
+}
+div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label p {
+    visibility: visible;
+}
+div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label {
+    visibility: hidden;
+}
+
+/* revert the flags remaining and the submit flag/cancel button position */
+div#popup-flag-post form div.popup-actions span {
+    order: 1;
+    flex: 1 1 auto;
+}
+div#popup-flag-post form div.popup-actions button.js-popup-submit {
+    order: 2;
+}
+div#popup-flag-post form div.popup-actions button.js-popup-close {
+    order: 3;
+}
+
+/* revert the flag modal "needs improvement" message */
+div#question div#popup-flag-post form ul.action-list li:nth-child(3) span.action-name::before {
+    visibility: visible;
+    content: "should be closed";
+}
+div#question div#popup-flag-post form ul.action-list li:nth-child(3) span.action-name {
+    visibility: hidden;
+}
+div#question div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc::before {
+    visibility: visible;
+    content: "This question should be closed in its current state for one reason or another.";
+}
+div#question div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc {
+    visibility: hidden;
 }
