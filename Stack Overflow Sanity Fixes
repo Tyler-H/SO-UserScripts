@@ -1,0 +1,52 @@
+/* Add these CSS styles to URLs on the domain for stackoverflow.com & stackexchange.com to apply to SO and most SE sites/meta sites */
+/* link fix */
+
+#content a {
+    text-decoration: none !important;
+}
+
+.s-anchors.s-anchors__default.s-anchors__visited a:not(.s-link), .s-anchors .s-anchors.s-anchors__default.s-anchors__visited a:not(.s-link) {
+    color: #07C;
+}
+
+/* new contributor noise removal */
+
+#post-editor .new-contributor-indicator, form[id^="add-comment-"] .new-contributor-indicator {
+    display: none;
+}
+
+/* orange border that looks like a loading bar at top of site removal */
+
+header.top-bar {
+    border-top: none !important;
+}
+
+/* revert the flag submit button to the right side where it belongs */
+
+div#popup-flag-post form div.popup-actions span {
+    order: 1;
+    margin-left: 0px !important;
+}
+div#popup-flag-post form div.popup-actions button.js-popup-submit {
+    order: 2;
+    margin-left: 330px;
+}
+div#popup-flag-post form div.popup-actions button.js-popup-close {
+    order: 3;
+}
+
+/* revert the flag modal "needs improvement" nonsense to an accurate message */
+div#popup-flag-post form ul.action-list li:nth-child(3) span.action-name::before {
+    visibility: visible;
+    content: "should be closed";
+}
+div#popup-flag-post form ul.action-list li:nth-child(3) span.action-name {
+    visibility: hidden;
+}
+div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc::before {
+    visibility: visible;
+    content: "This question should be closed in its current state for one reason or another.";
+}
+div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc {
+    visibility: hidden;
+}
