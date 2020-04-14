@@ -43,8 +43,12 @@ div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl
     content: "Off-Topic";
     visibility: visible;
 }
-div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label p {
+div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label p, div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label span {
     visibility: visible;
+}
+div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label span {
+    position: relative;
+    left: -343px;
 }
 div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label {
     visibility: hidden;
