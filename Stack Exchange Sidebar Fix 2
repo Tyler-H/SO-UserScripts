@@ -1,0 +1,23 @@
+/* Applies to URLs starting with https://stackoverflow.com */
+
+ol.nav-links li ol.nav-links > li:first-child {
+    display: none; /* hides useless "public" text */
+}
+
+ol.nav-links li ol.nav-links li:nth-child(2) a {
+    visibility: hidden;
+}
+ol.nav-links li ol.nav-links li:nth-child(2) a::after {
+    visibility: visible;
+    position:absolute;
+    left: 30px;
+    content:"Questions";
+}
+
+ol.nav-links li ol.nav-links li:nth-child(5), ol.nav-links li ol.nav-links li:nth-child(6) > a, ol.nav-links li ol.nav-links li:nth-child(7) > a {
+    display: none /* Hides the Jobs ads */
+}
+
+ol.nav-links li:last-child > ol.nav-links {
+    display: none; /* hides Teams / Private Q&A ad */
+}
