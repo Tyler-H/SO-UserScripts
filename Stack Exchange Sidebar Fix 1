@@ -1,0 +1,14 @@
+/* fixes the position */
+
+#left-sidebar { position: relative; left: -320px; border-right: 1px solid #d6d9dc; }
+
+/* 
+Apply to URLs starting with the following:
+
+- https://meta.stackexchange.com
+- https://stackoverflow.com
+- https://meta.stackoverflow.com
+- https://meta.superuser.com
+- https://superuser.com
+
+*/
