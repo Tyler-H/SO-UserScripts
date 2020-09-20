@@ -1,0 +1,5 @@
+a.icon-winterbash, .user-info .hat {
+    display: none !important;
+}
+
+/* Applies to Everything, just in case other sites ever pick up on this stupid trend */
