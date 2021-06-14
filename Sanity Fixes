@@ -1,4 +1,4 @@
-/* -- in Stylus or another user styles addon, apply these styles to URLs on the domain of stackoverflow.com & stackexchange.com
+/* -- in Stylus or another user styles addon, apply these styles to URLs on the domain of stackoverflow.com, stackexchange.com, serverfault.com, stackapps.com, and superuser.com
       to cover SO and most SE/meta sites. -- */
 
 /* font-family fixes */
