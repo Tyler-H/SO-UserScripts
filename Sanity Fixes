@@ -1,5 +1,119 @@
-/* -- in Stylus or another user styles addon, apply these styles to URLs on the domain of stackoverflow.com, stackexchange.com, serverfault.com, stackapps.com, and superuser.com
-      to cover SO and most SE/meta sites. -- */
+/* hiding this because wtf */
+
+html body.channels-page > iframe#messenger_iframe {
+    display: none !important;
+    visibility: hidden !important;
+    position: static !important;
+}
+
+/* Making badges section more like they used to be, pre 6.23.21 */
+body.user-page #badges svg {
+    display: none;
+}
+
+body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell:not(.mb12):last-child ul > li > div a, body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell:not(.mb12):last-child ul > li > div > div {
+    font-size: 12px !important;
+}
+body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 {
+    display: flex;
+    flex-flow: column;
+}
+
+body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > div {
+    text-align: center;
+}
+body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > div:first-child {
+    order: 2;
+}
+body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > div:last-child {
+    order: 1;
+}
+body.user-page #badges > .grid > .grid--cell:first-child > .grid > .grid--cell.mb12 > .grid {
+    border: 1px solid #f1b600;
+    border-radius: 3px;
+    background-color: #fff4d1;
+    color: #3c4146 !important;
+}
+body.user-page #badges > .grid > .grid--cell:first-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption {
+    visibility: hidden;
+    position: relative;
+    margin-top: 4px;
+}
+body.user-page #badges > .grid > .grid--cell:first-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption::after {
+    content: "GOLD";
+    font-weight: bold;
+    color: #6a737c;
+    font-size: 11px;
+    visibility: visible;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+}
+body.user-page #badges > .grid > .grid--cell:first-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fw-bold {
+    color: #3c4146 !important;
+}
+body.user-page #badges > .grid > .grid--cell:nth-child(2) > .grid > .grid--cell.mb12 > .grid {
+    border: 1px solid #9a9c9f;
+    border-radius: 3px;
+    background-color: #e8e8e8;
+    color: #3c4146 !important;
+}
+body.user-page #badges > .grid > .grid--cell:nth-child(2) > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption {
+    visibility: hidden;
+    position: relative;
+    margin-top: 4px;
+}
+body.user-page #badges > .grid > .grid--cell:nth-child(2) > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption::after {
+    content: "SILVER";
+    font-weight: bold;
+    color: #6a737c;
+    font-size: 11px;
+    visibility: visible;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+}
+body.user-page #badges > .grid > .grid--cell:nth-child(2) > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fw-bold {
+    color: #3c4146 !important;
+}
+body.user-page #badges > .grid > .grid--cell:last-child > .grid > .grid--cell.mb12 > .grid {
+    border: 1px solid #ab825f;
+    border-radius: 3px;
+    background-color: #f2e9e1;
+    color: #3c4146 !important;
+}
+body.user-page #badges > .grid > .grid--cell:last-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption {
+    visibility: hidden;
+    position: relative;
+    margin-top: 4px;
+}
+body.user-page #badges > .grid > .grid--cell:last-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption::after {
+    content: "BRONZE";
+    font-weight: bold;
+    color: #6a737c;
+    font-size: 11px;
+    visibility: visible;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+}
+body.user-page #badges > .grid > .grid--cell:last-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fw-bold {
+    color: #3c4146 !important;
+}
+
+body.user-page #user-card + div > div.grid--cell.fl1:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+#top-tags {
+    order: 1;
+}
+#top-posts {
+    order: 2;
+}
+#badges {
+    order: 3;
+}
 
 /* font-family fixes */
 
@@ -15,12 +129,16 @@ code, pre, .post-editor textarea, .wmd-container textarea, div.post-layout > div
     font-family: Consolas, monospace !important;
 }
 
+#content {
+    width: calc(100% - 150px);
+}
+
 /* line-height fix */
 .s-prose {
     line-height: 1.3 !important;
 }
 
-/* code block fixeS: scrollbar, background color, stupid border-radii... you name it */
+/* code block fixes: scrollbar, background color, stupid border-radii... you name it */
 pre:not(.CodeMirror-line) {
     background-color: var(--black-050) !important;
     scrollbar-color: var(--scrollbar) !important;
@@ -28,7 +146,7 @@ pre:not(.CodeMirror-line) {
     padding: 12px 8px !important;
 }
 
-/* body width fix; they stole 24px of width from the body. If only common sense took over and we could have like 50% to 75% of the screen width for reading */
+/* body width fix; they stole 24px of width from the body. If only common sense took over and we could have like 50% to 75% of the screen width for reading  */
 #sidebar {
     margin-left: 0px;
 }
@@ -49,8 +167,8 @@ a code {
     color: var(--blue-700) !important;
 }
 
-/* quote backgruond reversion to yellow */
-.s-prose blockquote {
+/* quote background reversion to yellow */
+.s-prose blockquote { 
     background: var(--yellow-050) !important;
 }
 
@@ -89,21 +207,17 @@ div#popup-close-question form span[title="number of votes already cast"] {
     font-weight: bold;
     border: none;
 }
-div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label::before {
-    content: "Off-Topic";
+div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label span.js-action-name::before {
+    content: "Off-Topic (";
+    visibility: visible;
+}
+div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label span.js-action-name::after {
+    content: ")";
     visibility: visible;
 }
 div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label p, div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label span {
     visibility: visible;
 }
-div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label span {
-    position: relative;
-    left: -205px;
-}
-div#popup-close-question form ul.action-list li:nth-child(2) .grid--cell:not(.fl1) label {
-    visibility: hidden;
-}
-
 /* revert the flags remaining and the submit flag/cancel button position */
 div#popup-flag-post form div.popup-actions span {
     order: 1;
@@ -132,6 +246,13 @@ div#question div#popup-flag-post form ul.action-list li:nth-child(3) span.action
     visibility: hidden;
 }
 
+
+/* restoring right-aligned authors on questions page */
+
+body.home-page #question-mini-list div.summary h3 + div {
+    width: 100%;
+}
+
 /* removing the thanks bullshit */
 div.js-reactions {
     display: none;
@@ -142,7 +263,7 @@ div.js-reactions {
     display: none;
 }
 
-/* because Sam Liew has dropped off the face of the Earth, I have to disable ReduceClutter due to bugs. This is to hide the "edit" button on closure notices that was hidden by ReduceClutter.js */
+/* because Sam has dropped off the face of the Earth, I have to disable ReduceClutter due to bugs. This is to hide the "edit" button on closure notices that was hidden by ReduceClutter.js */
 
 aside.s-notice > div + div:last-child {
     display: none;
