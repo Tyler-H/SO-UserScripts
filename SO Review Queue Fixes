@@ -1,0 +1,92 @@
+@-moz-document url("https://stackoverflow.com/review/close"), url-prefix("https://stackoverflow.com/review/close/1"), url-prefix("https://stackoverflow.com/review/close/2"), url-prefix("https://stackoverflow.com/review/close/3"), url-prefix("https://stackoverflow.com/review/close/4"), url-prefix("https://stackoverflow.com/review/close/5"), url-prefix("https://stackoverflow.com/review/close/6"), url-prefix("https://stackoverflow.com/review/close/7"), url-prefix("https://stackoverflow.com/review/close/8"), url-prefix("https://stackoverflow.com/review/close/9") {
+div.container { /* making the page container a more reasonable width. No one likes half the screen being empty when you have to scroll */
+    max-width: 1200px !important;
+}
+.s-page-title--text > nav { /* hide the nav menu at the top. It's unnecessary */
+    display: none;
+}
+.s-page-title--text  p.s-page-title--description { /* hide the description of the vote queue. I know what close voting is. */
+    display: none;
+}
+.s-page-title + div { /* set parent element to relative */
+    position: relative;
+}
+.s-page-title + div > div.grid--cell { /* move the filter options to the top where they belong. */
+    position: absolute;
+    top: -68px;
+    left: 250px;
+}
+div.js-review-task div.js-review-content h2:not(.popup-title-container) { /* hide instructions on what I'm doing here. Again, I know I'm supposed to review items in a review queue. */
+    display: none;
+}
+div.s-post-summary--meta { /* hide duplicated author information and question date; that info is already shown in the question body below */
+    display: none;
+}
+div.js-review-content > div > aside ~ div.s-post-summary.s-post-summary__minimal {/* making the question title have less margin */
+    margin: 8px 0 !important;
+}
+a.question-hyperlink {/* making the question title a bit bigger */
+    font-size: 18px;
+}
+#js-review-filter-id { /* set the filter option menu to be a modal instead of pushing the screen down */
+    position: absolute !important;
+    top: 0px;
+}
+article.s-post-summary > ul > li:first-child { /* removing repetitive meta information */
+    display: none;
+}
+div.js-review-content > div > aside + .fs-title { /* remove the "reivew the following question" announcement that is completely unnecessary */
+    display: none;
+}
+
+div.js-review-task > div.js-review-content > div > div:first-of-type + div.s-post-summary > div.s-post-summary--stats { /* hide answer and view stats on the question; they're visible as of 8.23.21 below the question anyway */
+    display: none;
+}
+div.js-review-task > div aside.js-review-instructions ~ div.grid--cell { /* re-introduce the hr as a border between question title and body */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #4a4e51;
+}
+aside.js-review-instructions div.s-notice p { /* removing all the unnecessary space for telling me I passed an audit item */
+    display: inline-block;
+    margin: 0px;
+}
+aside.js-review-instructions div.s-notice button {  /* removing all the unnecessary space for telling me I passed an audit item */
+    margin-top: 0 !important;
+}
+article.s-post-summary > div > div > h3 > a {
+    color: var(--black-700); /* for dark mode */
+    font-size: 18px;
+}
+article.s-post-summary > ul.s-post-summary--stats {
+    width: auto;
+}
+article.s-post-summary {
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+form#close-question-form > div.popup-actions > div > button.js-popup-cancel.js-popup-close { /* hiding the cancel button since you can click the x or click outside the modal to close it already, and the real final action button should be on the far right */
+    display: none;
+}
+
+form#close-question-form > div.popup-actions > div > button.js-popup-submit { /* making the VTC button a bit bigger so it's easier to click aimlessly */
+    padding: 1.2em;
+    position: absolute;
+    right:15px;
+    margin-bottom: 15px;
+}
+
+/* 8.23.21 temporary fix on the badges and asked date in review */
+
+div.js-review-task > div.js-review-content div.s-user-card {
+    width: 100%;
+    display: block;
+}
+
+div.js-review-task > div.js-review-content div.s-user-card > div.s-user-card--awards {
+    display: inline-block !important;
+}
+div.js-review-task > div.js-review-content div.s-user-card > div.s-user-card--time {
+    float: right;
+}
+}
