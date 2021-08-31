@@ -1,5 +1,4 @@
-/* -- in Stylus or another user styles addon, apply these styles to URLs on the domain of stackoverflow.com, stackexchange.com, serverfault.com, stackapps.com, and superuser.com */
-
+@-moz-document url-prefix("https://stackoverflow.com/c/socvr/"), domain("stackoverflow.com"), domain("stackexchange.com"), domain("serverfault.com"), domain("stackapps.com"), domain("superuser.com") {
 /* hiding this because wtf */
 
 html body.channels-page > iframe#messenger_iframe {
@@ -314,4 +313,56 @@ header.top-bar > div > div + ol:first-of-type {
 }
 #sidebar > .sidebar-subcommunity {
     display: none;
+}
+}
+
+@-moz-document url-prefix("https://stackoverflow.com/users/") {
+/* Hide Favorites and Following post sections from the summary tab of user profiles */
+
+.user-page .container #content #user-panel-following, .user-page .container #content #user-panel-bookmarks {
+    display: none;
+}
+.user-page .container #content #user-panel-accounts {
+    margin-right: 30px;
+}
+.user-page .container #content #user-panel-badges {
+    margin-right: 0px;
+}
+}
+
+@-moz-document domain("chat.stackoverflow.com"), domain("chat.stackexchange.com") {
+.message a:hover {
+    text-decoration: underline;
+}
+}
+
+@-moz-document url("https://stackoverflow.com/users/flag-summary/2756409"), url("https://meta.stackexchange.com/users/flag-summary/253521") {
+#mainbar>div:first-child {
+    display: none;
+}
+
+}
+
+@-moz-document url-prefix("https://stackoverflow.com/") {
+/* announcements box fix so it doesn't look like puke */
+
+.s-sidebarwidget__yellow .s-sidebarwidget--header {
+    background-color: #9e883b;
+}
+
+.s-sidebarwidget__yellow {
+    background-color: #3d3d3d;
+}
+
+/* fixing the user card for dark mode back to dark grey */
+
+div.post-signature.owner {
+    background-color: #444;
+}
+}
+
+@-moz-document url-prefix("https://stackoverflow.com") {
+.js-sidebar-zone {
+    display: none;
+}
 }
