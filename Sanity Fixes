@@ -1,4 +1,4 @@
-/* -- in Stylus or another user styles addon, apply these styles to URLs on the domain of stackoverflow.com, stackexchange.com, serverfault.com, stackapps.com, and superuser.com
+/* -- in Stylus or another user styles addon, apply these styles to URLs on the domain of stackoverflow.com, stackexchange.com, serverfault.com, stackapps.com, and superuser.com */
 
 /* hiding this because wtf */
 
@@ -13,35 +13,35 @@ body.user-page #badges svg {
     display: none;
 }
 
-body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell:not(.mb12):last-child ul > li > div a, body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell:not(.mb12):last-child ul > li > div > div {
+body.user-page #badges > .d-flex > .flex--item > .d-flex > .flex--item:not(.mb12):last-child ul > li > div a, body.user-page #badges > .d-flex > .flex--item > .d-flex > .flex--item:not(.mb12):last-child ul > li > div > div {
     font-size: 12px !important;
 }
-body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 {
+body.user-page #badges > .d-flex > .flex--item > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 {
     display: flex;
     flex-flow: column;
 }
 
-body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > div {
+body.user-page #badges > .d-flex > .flex--item > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > div {
     text-align: center;
 }
-body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > div:first-child {
+body.user-page #badges > .d-flex > .flex--item > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > div:first-child {
     order: 2;
 }
-body.user-page #badges > .grid > .grid--cell > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > div:last-child {
+body.user-page #badges > .d-flex > .flex--item > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > div:last-child {
     order: 1;
 }
-body.user-page #badges > .grid > .grid--cell:first-child > .grid > .grid--cell.mb12 > .grid {
+body.user-page #badges > .d-flex > .flex--item:first-child > .d-flex > .flex--item.mb12 > .d-flex {
     border: 1px solid #f1b600;
     border-radius: 3px;
     background-color: #fff4d1;
     color: #3c4146 !important;
 }
-body.user-page #badges > .grid > .grid--cell:first-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption {
+body.user-page #badges > .d-flex > .flex--item:first-child > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > .fs-caption {
     visibility: hidden;
     position: relative;
     margin-top: 4px;
 }
-body.user-page #badges > .grid > .grid--cell:first-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption::after {
+body.user-page #badges > .d-flex > .flex--item:first-child > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > .fs-caption::after {
     content: "GOLD";
     font-weight: bold;
     color: #6a737c;
@@ -51,21 +51,21 @@ body.user-page #badges > .grid > .grid--cell:first-child > .grid > .grid--cell.m
     left: 0%;
     right: 0%;
 }
-body.user-page #badges > .grid > .grid--cell:first-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fw-bold {
+body.user-page #badges > .d-flex > .flex--item:first-child > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > .fw-bold {
     color: #3c4146 !important;
 }
-body.user-page #badges > .grid > .grid--cell:nth-child(2) > .grid > .grid--cell.mb12 > .grid {
+body.user-page #badges > .d-flex > .flex--item:nth-child(2) > .d-flex > .flex--item.mb12 > .d-flex {
     border: 1px solid #9a9c9f;
     border-radius: 3px;
     background-color: #e8e8e8;
     color: #3c4146 !important;
 }
-body.user-page #badges > .grid > .grid--cell:nth-child(2) > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption {
+body.user-page #badges > .d-flex > .flex--item:nth-child(2) > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > .fs-caption {
     visibility: hidden;
     position: relative;
     margin-top: 4px;
 }
-body.user-page #badges > .grid > .grid--cell:nth-child(2) > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption::after {
+body.user-page #badges > .d-flex > .flex--item:nth-child(2) > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > .fs-caption::after {
     content: "SILVER";
     font-weight: bold;
     color: #6a737c;
@@ -75,21 +75,21 @@ body.user-page #badges > .grid > .grid--cell:nth-child(2) > .grid > .grid--cell.
     left: 0%;
     right: 0%;
 }
-body.user-page #badges > .grid > .grid--cell:nth-child(2) > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fw-bold {
+body.user-page #badges > .d-flex > .flex--item:nth-child(2) > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > .fw-bold {
     color: #3c4146 !important;
 }
-body.user-page #badges > .grid > .grid--cell:last-child > .grid > .grid--cell.mb12 > .grid {
+body.user-page #badges > .d-flex > .flex--item:last-child > .d-flex > .flex--item.mb12 > .d-flex {
     border: 1px solid #ab825f;
     border-radius: 3px;
     background-color: #f2e9e1;
     color: #3c4146 !important;
 }
-body.user-page #badges > .grid > .grid--cell:last-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption {
+body.user-page #badges > .d-flex > .flex--item:last-child > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > .fs-caption {
     visibility: hidden;
     position: relative;
     margin-top: 4px;
 }
-body.user-page #badges > .grid > .grid--cell:last-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fs-caption::after {
+body.user-page #badges > .d-flex > .flex--item:last-child > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > .fs-caption::after {
     content: "BRONZE";
     font-weight: bold;
     color: #6a737c;
@@ -99,11 +99,11 @@ body.user-page #badges > .grid > .grid--cell:last-child > .grid > .grid--cell.mb
     left: 0%;
     right: 0%;
 }
-body.user-page #badges > .grid > .grid--cell:last-child > .grid > .grid--cell.mb12 > .grid > .grid--cell.fl1 > .fw-bold {
+body.user-page #badges > .d-flex > .flex--item:last-child > .d-flex > .flex--item.mb12 > .d-flex > .flex--item.fl1 > .fw-bold {
     color: #3c4146 !important;
 }
 
-body.user-page #user-card + div > div.grid--cell.fl1:nth-child(2) {
+body.user-page #user-card + div > div.flex--item.fl1:nth-child(2) {
     display: flex;
     flex-direction: column;
 }
@@ -274,7 +274,7 @@ aside.s-notice > div + div:last-child {
 /* Same as above, but to hide the "products" link on the top bar */
 
 header.top-bar > div > div + ol:first-of-type {
-    display: none;
+    display: none !important;
 }
 
 /* Review Queue leader board padding reduction */
@@ -305,4 +305,13 @@ header.top-bar > div > div + ol:first-of-type {
 
 #mainbar a.question-hyperlink {
     font-size: 1.2rem;
+}
+
+/* hiding Collectives stuff */
+
+#sidebar > div.s-sidebarwidget.js-join-leave-container {
+    display: none;
+}
+#sidebar > .sidebar-subcommunity {
+    display: none;
 }
