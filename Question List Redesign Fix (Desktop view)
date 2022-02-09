@@ -1,12 +1,12 @@
 @-moz-document url("https://meta.stackoverflow.com/questions"), url-prefix("https://stackoverflow.com/questions") {
 /* Fixing display of stuff on /questions/ pages */
 
-/* remove the atrocious watched tag stlyes */
-
+/* restoring font to Arial */
 #mainbar, #mainbar a {
     font-family: Arial, sans-serif !important;
 }
 
+/* remove the watched tag styles */
 a.post-tag.s-tag__watched, a.post-tag.s-tag__watched:hover {
     background-color: var(--theme-tag-background-color);
     color: var(--theme-tag-color);
