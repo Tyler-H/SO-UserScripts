@@ -128,9 +128,7 @@ a.post-tag.s-tag__watched::before {
 .s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card div.s-user-card--info ul.s-user-card--awards { 
     height: 17px;    
 }
-}
 
-@-moz-document url("https://stackoverflow.com/"), url("https://meta.stackoverflow.com/"), domain("stackexchange.com") {
 /* fixing the user cards that display at the bottom right */
 .s-post-summary .s-user-card.s-user-card__minimal {
     display: grid;
