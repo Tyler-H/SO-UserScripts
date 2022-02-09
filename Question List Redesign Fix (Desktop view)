@@ -1,4 +1,4 @@
-@-moz-document url("https://meta.stackoverflow.com/"), url-prefix("https://stackoverflow.com/questions") {
+@-moz-document url("https://meta.stackoverflow.com/questions"), url-prefix("https://stackoverflow.com/questions") {
 /* Fixing display of stuff on /questions/ pages */
 
 /* remove the atrocious watched tag stlyes */
