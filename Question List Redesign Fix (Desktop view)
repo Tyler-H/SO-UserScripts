@@ -128,42 +128,4 @@ a.post-tag.s-tag__watched::before {
 .s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card div.s-user-card--info ul.s-user-card--awards { 
     height: 17px;    
 }
-
-/* fixing the user cards that display at the bottom right */
-.s-post-summary .s-user-card.s-user-card__minimal {
-    display: grid;
-    width: 185px;
-}
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card time {
-    display: flex;
-    order: 1;
-    height: 18px;
-    align-items: center;
-}
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card time span.relativetime {
-    margin-left: 3px;
-}
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card a {
-    display: block;
-    order: 2;
-}
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card a.s-avatar {
-    height: auto;
-    width: auto;
-}
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card a div img.s-avatar--image {
-    width: 32px;
-    height: 32px;
-}
-
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card div.s-user-card--info {
-    display: block;
-    order: 3;
-    width: calc(100% - 40px);
-    margin-left: 8px;
-    height: 32px;
-}
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card div.s-user-card--info ul.s-user-card--awards { 
-    height: 17px;    
-}
 }
