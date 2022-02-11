@@ -26,13 +26,13 @@ a.post-tag.s-tag__watched::before {
 .s-post-summary__deleted .s-post-summary--stats-item:not(.is-deleted) {
     filter: grayscale(0%) !important;
 }
-.s-post-summary__ignored .s-post-summary--content-title a.s-link {
+.s-post-summary__ignored .s-post-summary--content-title a.s-link, 
+.s-post-summary__deleted .s-post-summary--content-title a.s-link {
     color: var(--theme-question-title-color);
 }
 .s-post-summary__ignored .s-post-summary--content-title a.s-link:visited {
     color: var(--theme-question-title-color-visited);
 }
-
 
 /* fixing the display of the question entries on the questions pages */
 .s-post-summary {
@@ -43,6 +43,12 @@ a.post-tag.s-tag__watched::before {
     margin-right: 16px;
     width: 58px;
 }
+
+/* Hiding the "deleted" box for questions that are deleted. A bright red background is plenty of indication */
+.s-post-summary .js-post-summary-stats .s-post-summary--stats-item.is-deleted:first-child {
+    display: none;
+}
+
 /* Fixing the 'votes' box */
 .s-post-summary .js-post-summary-stats .s-post-summary--stats-item:first-child {
     width: 58px;
