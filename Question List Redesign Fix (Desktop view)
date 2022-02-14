@@ -115,11 +115,11 @@ a.post-tag.s-tag__watched::before {
     display: block;
     order: 2;
 }
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card a.s-avatar {
+.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card .s-avatar {
     height: auto;
     width: auto;
 }
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card a div img.s-avatar--image {
+.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card .s-avatar div img.s-avatar--image {
     width: 32px;
     height: 32px;
 }
