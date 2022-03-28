@@ -28,7 +28,8 @@ a.post-tag.s-tag__watched::before {
 }
 .s-post-summary__ignored .s-post-summary--content-title a.s-link, 
 .s-post-summary__deleted .s-post-summary--content-title a.s-link {
-    color: var(--theme-question-title-color);
+    /* color: var(--theme-question-title-color); */ /* can't use this anymore because they changed it on 2022-03-28 */
+    color: var(--theme-post-title-color);
 }
 .s-post-summary__ignored .s-post-summary--content-title a.s-link:visited {
     color: var(--theme-question-title-color-visited);
