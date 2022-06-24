@@ -39,4 +39,4 @@
     
     //revert :active styles
     document.head.insertAdjacentHTML("beforeend",`<style>button[class^="js-vote-"].s-btn:active { background: none }</style>`);
-}});
+})();
