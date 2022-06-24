@@ -1,11 +1,10 @@
 // ==UserScript==
-// @name         Original Vote Buttons
-// @homepage     https://github.com/Tyler-H/SO-UserScripts/
+// @name         Original Stack Overflow Vote Buttons
+// @homepage     https://github.com/Tyler-H/SO-UserScripts/blob/master/OriginalVoteButtons.js
 // @version      1.0
 // @description  Reverts post vote buttons on Stack Overflow to the previous implementation, pre-2022-06-24
 // @author       TylerH
 // @match        https://stackoverflow.com/questions/*
-// @grant        none
 // ==/UserScript==
 
 (function() {
