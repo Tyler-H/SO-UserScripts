@@ -41,5 +41,6 @@
     document.head.insertAdjacentHTML("beforeend",`<style>button[class^="js-vote-"].s-btn:active { background: none }</style>`);
     
     //de-emphasize color brightness of buttons while leaving brightness of score
-    allbtns.forEach ( x => x.style.setProperty('color','rgb(105, 111, 117)','important'));
+    //allbtns.forEach ( x => x.style.setProperty('color','rgb(105, 111, 117)',''));
+    document.head.insertAdjacentHTML("beforeend",`<style>button[class^="js-vote-"].fc-black-700 { color: rgb(105, 111, 117); }</style>`);
 })();
