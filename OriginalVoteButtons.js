@@ -5,6 +5,7 @@
 // @description  Reverts post vote buttons on Stack Overflow to the previous implementation, pre-2022-06-24
 // @author       TylerH
 // @match        https://stackoverflow.com/questions/*
+// @grant        none
 // ==/UserScript==
 
 (function() {
