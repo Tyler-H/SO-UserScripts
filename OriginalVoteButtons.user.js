@@ -18,6 +18,12 @@
     const updownsvg = document.querySelectorAll('.js-vote-down-btn .iconArrowDown, .js-vote-up-btn .iconArrowUp');
     const downpath = document.querySelectorAll('button.js-vote-down-btn svg.iconArrowDown path');
     const uppath = document.querySelectorAll('button.js-vote-up-btn svg.iconArrowUp path');
+    const voteCounts = document.querySelectorAll('.js-vote-count');
+
+    voteCounts.forEach(element => {
+        element.classList.remove('fc-theme-body-font', 'fw-bold', 'fs-subheading', 'py4');
+        element.classList.add('fc-black-500', 'fs-title');
+    });
 
     // set attribute values for the SVG elements
     updownsvg.forEach(svg => {
