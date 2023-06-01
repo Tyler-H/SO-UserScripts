@@ -21,17 +21,16 @@
     let uppath = document.querySelectorAll('button.js-vote-up-btn svg.iconArrowUp path');
 
     // set attribute values for the SVG elements
-    downsvg.forEach(x => x.setAttribute('height', '36'));
-    downsvg.forEach(x => x.setAttribute('width', '36'));
-    downsvg.forEach(x => x.setAttribute('viewBox', '0 0 36 36'));
-
-    upsvg.forEach(x => x.setAttribute('height', '36'));
-    upsvg.forEach(x => x.setAttribute('width', '36'));
-    upsvg.forEach(x => x.setAttribute('viewBox', '0 0 36 36'));
+    [...downsvg, ...upsvg]
+        .forEach(svg => {
+            svg.setAttribute("height", "36");
+            svg.setAttribute("width", "36");
+            svg.setAttribute("viewBox", "0 0 36 36");
+        });
 
     // set SVG path values to resize the SVGs themselves
-    downpath.forEach(x => x.setAttribute('d', 'M2 11h32L18 27 2 11Z'));
-    uppath.forEach(x => x.setAttribute('d', 'M2 25h32L18 9 2 25Z'));
+    downpath.forEach(path => path.setAttribute('d', 'M2 11h32L18 27 2 11Z'));
+    uppath.forEach(path => path.setAttribute('d', 'M2 25h32L18 9 2 25Z'));
 
     //remove border & revert padding
     allbtns.forEach(x => x.setAttribute('style', 'border: 1px solid transparent !important; padding: 1px 4px'));
