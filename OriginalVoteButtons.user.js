@@ -42,7 +42,7 @@
 
         /* revert :hover styles */
         button[class^="js-vote-"].s-btn:hover {
-            color: var(--blue-500) !important;
+            color: var(--theme-primary-color) !important;
             background: none !important;
         }
 
