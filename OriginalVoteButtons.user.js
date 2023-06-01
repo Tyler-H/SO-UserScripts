@@ -14,11 +14,11 @@
 // ==/UserScript==
 
 (function () {
-    let allbtns = document.querySelectorAll("button[class^='js-vote-']");
-    let downsvg = document.querySelectorAll('.js-vote-down-btn .iconArrowDown');
-    let upsvg = document.querySelectorAll('.js-vote-up-btn .iconArrowUp');
-    let downpath = document.querySelectorAll('button.js-vote-down-btn svg.iconArrowDown path');
-    let uppath = document.querySelectorAll('button.js-vote-up-btn svg.iconArrowUp path');
+    const allbtns = document.querySelectorAll("button[class^='js-vote-']");
+    const downsvg = document.querySelectorAll('.js-vote-down-btn .iconArrowDown');
+    const upsvg = document.querySelectorAll('.js-vote-up-btn .iconArrowUp');
+    const downpath = document.querySelectorAll('button.js-vote-down-btn svg.iconArrowDown path');
+    const uppath = document.querySelectorAll('button.js-vote-up-btn svg.iconArrowUp path');
 
     // set attribute values for the SVG elements
     [...downsvg, ...upsvg]
