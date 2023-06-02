@@ -12,31 +12,28 @@
 // @match        https://*.askubuntu.com/*
 // @match        https://*.mathoverflow.net/*
 // @grant        GM_addStyle
+// @run-at       document-start
 // ==/UserScript==
 
 (function () {
-    const updownsvg = document.querySelectorAll('.js-vote-down-btn .iconArrowDown, .js-vote-up-btn .iconArrowUp');
-    const downpath = document.querySelectorAll('button.js-vote-down-btn svg.iconArrowDown path');
-    const uppath = document.querySelectorAll('button.js-vote-up-btn svg.iconArrowUp path');
-    const voteCounts = document.querySelectorAll('.js-vote-count');
-
-    voteCounts.forEach(element => {
-        element.classList.remove('fc-theme-body-font', 'fw-bold', 'fs-subheading', 'py4');
-        element.classList.add('fc-black-500', 'fs-title');
-    });
-
-    // set attribute values for the SVG elements
-    updownsvg.forEach(svg => {
-        svg.setAttribute("height", "36");
-        svg.setAttribute("width", "36");
-        svg.setAttribute("viewBox", "0 0 36 36");
-    });
-
-    // set SVG path values to resize the SVGs themselves
-    downpath.forEach(path => path.setAttribute('d', 'M2 11h32L18 27 2 11Z'));
-    uppath.forEach(path => path.setAttribute('d', 'M2 25h32L18 9 2 25Z'));
-
     GM_addStyle(`
+        /* Revert vote count styling */
+        #content .js-vote-count {
+            color: var(--black-500) !important;
+            font-size: var(--fs-title) !important;
+            font-weight: 500 !important;
+            padding-top: var(--su6) !important;
+            padding-bottom: var(--su6) !important;
+        }
+
+        .js-voting-container {
+            padding: 4px;
+        }
+
+        .js-vote-down-btn .iconArrowDown, .js-vote-up-btn .iconArrowUp {
+            transform: scale(2);
+        }
+
         button[class^='js-vote-'] {
             /* remove border & revert padding */
             border: 1px solid transparent !important;
@@ -67,6 +64,4 @@
             color: rgb(186, 191, 196) !important;
         }
     `);
-
-    //allbtns.forEach ( x => x.style.setProperty('color','rgb(105, 111, 117)',''));
 })();
