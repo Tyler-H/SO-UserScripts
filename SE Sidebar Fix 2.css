@@ -1,21 +1,38 @@
 @-moz-document url-prefix("https://stackoverflow.com/"), url-prefix("https://meta.stackoverflow.com") {
-ol.nav-links li:nth-child(2) ol.nav-links li:nth-child(2) a {
-    visibility:hidden;
+nav[role="navigation"] > ol.nav-links > li > ol.nav-links {
+    display: flex; /* making a flex container to allow reordering */
+    flex-direction: column;
 }
-ol.nav-links li:nth-child(2) ol.nav-links li:nth-child(2) a::after {
-    visibility: visible;
-    position:absolute;
-    left: 30px;
-    content: "Questions";
+nav[role="navigation"] > ol.nav-links > li {
+    display: none !important;
 }
-
-ol.nav-links li:nth-child(2) ol.nav-links li:nth-child(5), ol.nav-links li ol.nav-links li:nth-child(6) {
-    display: none !important; /* stupid-ass important in site code */
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) {
+    display: block !important;
 }
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) > ol.nav-links > li.pb24:nth-child(5) {
+    display: none !important; /* hides unnecessary space */
 }
-
-@-moz-document url-prefix("https://stackoverflow.com") {
-ol.nav-links li:nth-child(2) ol.nav-links li:nth-child(7), ol.nav-links li:nth-child(2) ol.nav-links li:nth-child(8), ol.nav-links li:nth-child(2) ol.nav-links li:nth-child(9) {
-    display: none; /* hides the jobs ads */
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(6) {
+    display: none !important; /* hides saves */
 }
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(8) {
+    display: none !important; /* hides Companies */   
+}
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(n + 9) {
+    display: none !important; /* hides everything else, like collectives and discussions */
+}
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(1) {
+    order: 1;
+}
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(2) {
+    order: 2;
+}
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(4) {
+    order: 3;
+}
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(7) {
+    order: 4;
+}
+nav[role="navigation"] > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(3) {
+    order: 5;
 }
