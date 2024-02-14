@@ -1,4 +1,4 @@
-@-moz-document url("https://meta.stackoverflow.com/questions"), url-prefix("https://stackoverflow.com/questions") {
+@-moz-document url-prefix("https://meta.stackoverflow.com/questions"), url-prefix("https://stackoverflow.com/questions") {
 /* Fixing display of stuff on /questions/ pages */
 
 /* restoring font to Arial */
@@ -8,8 +8,8 @@
 
 /* remove the watched tag styles */
 a.post-tag.s-tag__watched, a.post-tag.s-tag__watched:hover {
-    background-color: var(--theme-tag-background-color);
-    color: var(--theme-tag-color);
+    /*background-color: var(--theme-tag-background-color);
+    color: var(--theme-tag-color);*/ /* No longer needed as of October 2023 colo redesign */
     display: inline-block;
     padding: .4em .5em;
 }
@@ -18,21 +18,34 @@ a.post-tag.s-tag__watched::before {
     display: inline;
 }
 
-/* restoring the color and display of ignored posts so I don't feel colorblind when using Stack Overflow */
-.s-post-summary__ignored .s-post-summary--meta, .s-post-summary__deleted .s-post-summary--meta { 
-    filter: grayscale(0%) !important; 
-}
-.s-post-summary__ignored .s-post-summary--stats-item:not(.is-deleted), 
-.s-post-summary__deleted .s-post-summary--stats-item:not(.is-deleted) {
+/* restoring the color and display of ignored and deleted posts so I don't feel colorblind when using Stack Overflow */
+.s-post-summary__ignored .s-post-summary--meta a, .s-post-summary__deleted .s-post-summary--meta * { 
     filter: grayscale(0%) !important;
 }
-.s-post-summary__ignored .s-post-summary--content-title a.s-link, 
-.s-post-summary__deleted .s-post-summary--content-title a.s-link {
+.s-post-summary__ignored .s-post-summary--stats-item:not(.is-deleted), .s-post-summary__deleted .s-post-summary--stats-item:not(.is-deleted) {
+    filter: grayscale(0%) !important;
+}
+.s-post-summary__ignored .s-post-summary--content-title a.s-link, .s-post-summary__deleted .s-post-summary--content-title a.s-link, .s-post-summary__ignored .s-post-summary--content-title a.s-link:visited {
     /* color: var(--theme-question-title-color); */ /* can't use this anymore because they changed it on 2022-03-28 */
     color: var(--theme-post-title-color);
 }
-.s-post-summary__ignored .s-post-summary--content-title a.s-link:visited {
-    color: var(--theme-question-title-color-visited);
+.s-post-summary__ignored .s-post-summary--meta .s-user-card.s-user-card__minimal {
+    filter: grayscale(0%) !important; 
+}
+
+.s-post-summary__ignored .s-post-summary--stats .s-post-summary--stats-item.has-answers.has-accepted-answer {
+    color: var(--white);
+    background-color: var(--green-600);
+    border-color: var(--green-600);
+}
+/* Commenting out as no longer needed as of October 19 2023 */
+/*.s-post-summary--stats .s-post-summary--stats-item.has-answers.has-accepted-answer {
+    color: var(--white);
+    background-color: var(--green-600);
+    border-color: var(--green-600);
+}*/
+.s-post-summary__ignored .s-post-summary--stats .s-post-summary--stats-item.has-answers {
+    background-color: transparent;
 }
 
 /* fixing the display of the question entries on the questions pages */
@@ -120,7 +133,7 @@ a.post-tag.s-tag__watched::before {
     height: auto;
     width: auto;
 }
-.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card .s-avatar div img.s-avatar--image {
+.s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card .s-avatar div img.s-avatar--image{
     width: 32px;
     height: 32px;
 }
@@ -134,5 +147,14 @@ a.post-tag.s-tag__watched::before {
 }
 .s-post-summary .s-post-summary--content .s-post-summary--meta .s-user-card div.s-user-card--info ul.s-user-card--awards { 
     height: 17px;    
+}
+
+/* Restoring score font to Segui UI */
+
+div.js-vote-count {
+    font-family: "Segoe UI Adjusted","Segoe UI","Liberation Sans",sans-serif !important;
+    font-size: 21px !important;
+    font-weight: 400 !important;
+    color: rgb(186,191,196) !important;
 }
 }
