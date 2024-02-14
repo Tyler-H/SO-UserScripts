@@ -1,10 +1,40 @@
 @-moz-document url-prefix("https://stackoverflow.com/c/socvr/"), domain("stackoverflow.com"), domain("stackexchange.com"), domain("serverfault.com"), domain("stackapps.com"), domain("superuser.com") {
+/* nobody wants to see ads */
+
+#hireme {
+    display: none;
+}
+#newsletter-ad {
+    display: none;
+}
+
+#question > div.js-zone-container.zone-container-sidebar {
+    display: none;
+}
+
+/* Remove related questions junk moved to the middle of the page on 3.21.23 */
+#inline_related_var_a_less, #inline_related_var_a_more, #inline_related_var_a_more + div {
+    display: none;
+}
+
+
+/* New notifications don't need to be bold; they have a whole fucking background color */
+
+.message-text .unread-bold {
+    font-weight: normal !important;
+}
+
 /* hiding this because wtf */
 
 html body.channels-page > iframe#messenger_iframe {
     display: none !important;
     visibility: hidden !important;
     position: static !important;
+}
+
+/* Hiding AI reminder because I'm not an asshole who uses AI */
+.ai-content-policy-notice {
+    display: none;
 }
 
 /* Making badges section more like they used to be, pre 6.23.21 */
@@ -134,6 +164,11 @@ code, pre, .post-editor textarea, .wmd-container textarea, div.post-layout > div
     width: calc(100% - 150px);
 }
 
+/* home page question title font-size fix. Why is it so big? */
+.s-post-summary div h3.s-post-summary--content-title {
+    font-size: 16px !important;
+}
+
 /* line-height fix */
 .s-prose {
     line-height: 1.3 !important;
@@ -141,7 +176,9 @@ code, pre, .post-editor textarea, .wmd-container textarea, div.post-layout > div
 
 /* code block fixes: scrollbar, background color, stupid border-radii... you name it */
 pre:not(.CodeMirror-line) {
-    background-color: var(--black-050) !important;
+    /*background-color: var(--black-050) !important; */
+    /* replacing the above line with a new one since they changed --black-050 to white or got rid of it or something */
+    background-color: rgb(246, 246, 246);
     scrollbar-color: var(--scrollbar) !important;
     border-radius: 0px !important;
     padding: 12px 8px !important;
@@ -170,7 +207,7 @@ a code {
 
 /* quote background reversion to yellow */
 .s-prose blockquote { 
-    background: var(--yellow-050) !important;
+    /*background: var(--yellow-050) !important;*/ /*commenting out as it is overridden by new styles as of October 19 2023 */
 }
 
 /* Repetitive HNQ test removal */
@@ -183,8 +220,12 @@ div#qlist-wrapper.js-tech-sites-questions {
     display: none;
 }
 
+.js-add-comment-message {
+    display: none;
+}
+
 /* orange border that looks like a loading bar at top of site removal */
-header.top-bar {
+header.s-topbar {
     border-top: none !important;
 }
 
@@ -197,6 +238,7 @@ div#popup-close-question form div.popup-actions span {
 }
 div#popup-close-question form div.popup-actions button.js-popup-submit {
     order: 2;
+    padding: 1em;
 }
 div#popup-close-question form div.popup-actions button.js-popup-close {
     order: 3;
@@ -232,18 +274,18 @@ div#popup-flag-post form div.popup-actions button.js-popup-close {
 }
 
 /* revert the flag modal "needs improvement" message */
-div#question div#popup-flag-post form ul.action-list li:nth-child(3) span.action-name::before {
+div#question div#popup-flag-post form ul.action-list li:nth-child(3):not(:last-of-type) span.action-name::before {
     visibility: visible;
     content: "should be closed";
 }
-div#question div#popup-flag-post form ul.action-list li:nth-child(3) span.action-name {
+div#question div#popup-flag-post form ul.action-list li:nth-child(3):not(:last-of-type) span.action-name {
     visibility: hidden;
 }
-div#question div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc::before {
+div#question div#popup-flag-post form ul.action-list li:nth-child(3):not(:last-of-type) span.action-desc::before {
     visibility: visible;
     content: "This question should be closed in its current state for one reason or another.";
 }
-div#question div#popup-flag-post form ul.action-list li:nth-child(3) span.action-desc {
+div#question div#popup-flag-post form ul.action-list li:nth-child(3):not(:last-of-type) span.action-desc {
     visibility: hidden;
 }
 
@@ -272,7 +314,7 @@ aside.s-notice > div + div:last-child {
 
 /* Same as above, but to hide the "products" link on the top bar */
 
-header.top-bar > div > div + ol:first-of-type {
+header.s-topbar > div > a + ol:first-of-type {
     display: none !important;
 }
 
@@ -282,44 +324,220 @@ header.top-bar > div > div + ol:first-of-type {
     padding: 5px !important;
 }
 
-/* Review Queue numbering to see what place each person is in */
-
-#content > div.grid > div.grid--cell > div.grid.ff-row-wrap > div.grid--cell:first-child {
-    border-right: 1px solid grey;
-    padding-right: 5px;
-}
-
-.grid--cell:nth-child(2) table.w100 {
-    counter-reset: section;
-}
-.grid--cell:nth-child(2) table.w100 tbody tr td:first-child::before {
-    counter-increment: section;
-    content: counter(section) ".";
-    position: relative;
-    top: 32px;
-    right: 12px;
-}
-
 /* restoring normal size questions on the /questions page */
 
 #mainbar a.question-hyperlink {
     font-size: 1.2rem;
 }
 
+/* */
 /* hiding Collectives stuff */
+/* */
 
+/* hides the collective nonsense on the right sidebar */
 #sidebar > div.s-sidebarwidget.js-join-leave-container {
     display: none;
 }
 #sidebar > .sidebar-subcommunity {
     display: none;
 }
+
+/* hides the "recommended by <collective>" crap */
+.js-endorsements {
+    display: none;
+}
+
+/* hides the trophy for Collectives ranking next to usernames in user cards*/
+div.user-details > a[href^="/collectives"] {
+    display: none;
+}
+
+ul.s-user-card--awards li a[href^="/collectives/"] {
+    display: none;
+}
+
+/* hides collective buttons on the tag line */
+a.subcommunity-topic-avatar {
+    display: none;
+}
+div.js-community-icons {
+    display: none;
+}
+
+
+/* */
+/* Next Badge Modal resizing to sensible size */
+/* */
+
+#js-select-badge-contents > div {
+    max-width: 900px;
+    max-height: 620px !important;
+}
+
+#js-select-badge-contents div div div.js-badge-list-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+#js-select-badge-contents div div div.js-badge-list-container button {
+    height: 150px;
+}
+#js-select-badge-contents div div div.js-badge-list-container button > span {
+    font-size: 12px !important;
+}
+
+/* */
+/* what the fuck */
+/* */
+
+.s-topbar--content li:nth-child(3) .s-activity-indicator, .s-topbar--content li:nth-child(4) .s-activity-indicator {
+    border-radius: 2px !important; /* 1000px? Really? */
+    top: calc(50% - 20px) !important;
+    right: 0px !important;
+}
+
+.s-topbar--item:hover .s-activity-indicator {
+    top: calc(50% - 14px) !important;
+}
+
+.s-topbar--content > li > a > span.s-activity-indicator {
+    transition: none !important; /* why is there a transition on here? */
+}
+
+/* */
+/* Hiding horrendous Collectives spam
+/* */
+#question-header + div.d-flex > div.flex--item:nth-of-type(4n) {
+    display: none;
+}
+#left-sidebar ol.nav-links li ol.nav-links > div[class*="js-collectives-"] {
+    display: none;
+}
+
+/* */
+/* Renaming bookmarks back to saves jfc */
+/* */
+#mainbar-full > div.js-user-header:nth-child(2) > div > a.s-navigation--item:nth-child(3) {
+    visibility: hidden;
+}
+#mainbar-full > div.js-user-header:nth-child(2) > div > a.s-navigation--item:nth-child(3)::before {
+    content: "Bookmarks";
+    visibility: visible;
+    position: relative;
+    margin-right: -35px;
+    border-radius: 1000px;
+    padding: var(--su6) var(--su12);
+}
+#mainbar-full > div.js-user-header:nth-child(2) > div > a.s-navigation--item:nth-child(3):hover::before {
+    background: var(--black-075);
+    color: var(--black-600);
+    border-radius: 1000px;
+    padding: var(--su6) var(--su12);
+    margin-right: -35px;
+}
+
+/* bookmark color revision */
+
+button.js-saves-btn > .svg-icon.js-saves-btn-selected path {
+    fill: gold !important;
+}
+
+
+/* Testing sticky voting block */
+
+#answers .votecell .js-voting-container {
+    position: sticky;
+    top: 100px;
+    z-index: 1; /* why... why did they set everything to z-index: 0 on 12/19/22?! */
+}
+
+    /* Fixing the width of the tooltips thanks to sticky positioning */
+    div.js-voting-container button.js-vote-up-btn + div.s-popover[role="tooltip"] {
+        min-width: 150px;
+        text-align: center;
+        padding: 11px;
+    }
+    div.js-voting-container button.js-vote-down-btn + div.s-popover[role="tooltip"] {
+        min-width: 170px;
+        text-align: center;
+        padding: 11px;
+    }
+    .js-voting-container div.js-vote-count + div.s-popover[role="tooltip"] {
+        min-width: 217px;
+    }
+    button.js-saves-btn + div.s-popover {
+        min-width: 128px;
+    }
+    a.js-post-issue +div.s-popover {
+        min-width: 140px;
+    }
+
+/* reverting ugly styling of inbox */
+
+div.js-inbox-notifications ul > li.read-item {
+    background-color: inherit; /* gets rid of grey background on read items */
+}
+div.js-inbox-notifications .unread-bold {
+    font-weight: normal !important;
+}
+
+/* Fixing color of ignored content so I don't feel color blind */
+
+div[id^="question-summary-"].s-post-summary__ignored {
+    opacity: 0.6;
+}
+div[id^="question-summary-"].s-post-summary__ignored:hover {
+    opacity: 1;
+}
+
+.s-post-summary__ignored .s-post-summary--meta-tags a, .s-post-summary__ignored .s-post-summary--meta-tags .post-tag {
+    color: rgb(156, 193, 219) !important;
+    background-color: rgb(61, 73, 81) !important;
+}
+
+.s-post-summary__ignored .s-post-summary--content-title > a {
+    color: rgb(51, 167, 255) !important;
+}
+
+/* increasing the height of stack snippet iframe because come on */
+.snippet-code .snippet-result .snippet-result-code {
+    height: 500px;
+}
+}
+
+@-moz-document url-prefix("https://stackoverflow.com/review/close/stats") {
+/* Review Queue numbering to see what place each person is in */
+
+#content > div.d-flex > div.flex--item > div.d-flex.ff-row-wrap > div.flex--item:first-child {
+    border-right: 1px solid grey;
+    padding-right: 5px;
+}
+
+table.w100 {
+    counter-reset: section;
+}
+table.w100 tbody tr td:first-child::before { 
+    counter-increment: section;
+    content: counter(section) ".";
+    position: relative;
+    top: 32px;
+    right: 12px;
+}
+table.w100 tbody tr td.va-middle.p8 {
+    padding: 0px !important;
+}
+
+/* hiding Sam's entry because he's a dirty fucking cheater */
+
+div.d-flex.ff-row-wrap > div.flex--item:nth-child(2) > table.w100 tr:nth-child(5) { /* Will need to update when Sam's position changes. */
+    display: none;
+}
+
 }
 
 @-moz-document url-prefix("https://stackoverflow.com/users/") {
-/* Hide Favorites and Following post sections from the summary tab of user profiles */
 
-.user-page .container #content #user-panel-following, .user-page .container #content #user-panel-bookmarks {
+/* Hide Favorites, Following, and Articles post sections from the summary tab of user profiles */
+
+.user-page .container #content #user-panel-following, .user-page .container #content #user-panel-bookmarks, .user-page .container #content #user-panel-articles {
     display: none;
 }
 .user-page .container #content #user-panel-accounts {
@@ -350,19 +568,34 @@ header.top-bar > div > div + ol:first-of-type {
     background-color: #9e883b;
 }
 
-.s-sidebarwidget__yellow {
+.s-sidebarwidget.s-sidebarwidget__yellow {
     background-color: #3d3d3d;
-}
-
-/* fixing the user card for dark mode back to dark grey */
-
-div.post-signature.owner {
-    background-color: #444;
 }
 }
 
 @-moz-document url-prefix("https://stackoverflow.com") {
 .js-sidebar-zone {
     display: none;
+}
+
+/* fixing user card color */
+div.post-signature.owner {
+    background-color: rgb(60,60,60);
+}
+}
+
+@-moz-document domain("stackexchange.com") {
+/* Fixing color of the top bar icons on stackexchange.com sites with a black topbar, because white is ugly */
+
+.s-topbar ol.s-topbar--content li:not(:nth-child(2)) .s-topbar--item { /* Exclude the reputation amount list item */
+    color: lightgray;
+}
+}
+
+@-moz-document url-prefix("https://meta.stackoverflow.com") {
+/* Fixing color of the top bar icons on meta.stackoverflow.com because dark grey is ugly */
+
+.s-topbar ol.s-topbar--content li:not(:nth-child(2)) .s-topbar--item { /* Exclude the reputation amount list item */
+    color: gray;
 }
 }
