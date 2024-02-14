@@ -17,9 +17,9 @@ div.container { /* making the page container a more reasonable width. No one lik
     left: 250px;
 }
 div.js-review-task div.js-review-content h2:not(.popup-title-container) { /* hide instructions on what I'm doing here. Again, I know I'm supposed to review items in a review queue. */
-    display: none;
+    /*display: none; */ /* this was changed at some point and now accidentally targets h2 elements inside the post body, so I'm turning it off but leaving the style here in disabled format */
 }
-div.s-post-summary--meta { /* hide duplicated author information and question date; that info is already shown in the question body below */
+div.s-post-summary div.s-post-summary--meta { /* hide duplicated author information and question date; that info is already shown in the question body below */
     display: none;
 }
 div.js-review-content > div > aside ~ div.s-post-summary.s-post-summary__minimal {/* making the question title have less margin */
@@ -27,6 +27,9 @@ div.js-review-content > div > aside ~ div.s-post-summary.s-post-summary__minimal
 }
 a.question-hyperlink {/* making the question title a bit bigger */
     font-size: 18px;
+}
+.s-post-summary--content-title a.question-hyperlink { /* De-Mac-ifying the title font so that it is Arial again */
+    font-family: Arial;
 }
 #js-review-filter-id { /* set the filter option menu to be a modal instead of pushing the screen down */
     position: absolute !important;
