@@ -9,12 +9,12 @@
 /* remove the watched tag styles */
 a.post-tag.s-tag__watched, a.post-tag.s-tag__watched:hover {
     /*background-color: var(--theme-tag-background-color);
-    color: var(--theme-tag-color);*/ /* No longer needed as of October 2023 colo redesign */
+    color: var(--theme-tag-color);*/ /* No longer needed as of October 2023 color redesign */
     display: inline-block;
-    padding: .4em .5em;
+    /* padding: .4em .5em; */ /* doesn't seem to be needed with whatever change they made on 4/21/24 */
 }
 a.post-tag.s-tag__watched::before {
-    position: static;
+
     display: inline;
 }
 
@@ -156,5 +156,16 @@ div.js-vote-count {
     font-size: 21px !important;
     font-weight: 400 !important;
     color: rgb(186,191,196) !important;
+}
+
+/* Removing 'required' asterisks from post edit page */
+.post-editor label abbr.s-required-symbol, div.js-tag-editor-container label abbr.s-required-symbol {
+    display: none;
+}
+
+/* Restoring tag coloring on the edit page because why TF would it be different here */
+div.js-tag-editor span.s-tag {
+    background-color: rgb(67, 84, 96);
+    color:rgb(156, 193, 219);
 }
 }
