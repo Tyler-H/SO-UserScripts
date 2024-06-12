@@ -1,9 +1,0 @@
-@-moz-document url("https://stackoverflow.com"), url("https://stackoverflow.com/"), url-prefix("https://meta.stackexchange.com"), url-prefix("https://stackoverflow.com/q"), url-prefix("https://stackoverflow.com/e"), url-prefix("https://stackoverflow.com/r"), url-prefix("https://stackoverflow.com/u"), url-prefix("https://stackoverflow.com/t"), url-prefix("https://meta.stackoverflow.com"), url-prefix("https://meta.superuser.com"), url-prefix("https://superuser.com/"), url-prefix("https://serverfault.com") {
-#left-sidebar { position: relative; left: -320px; border-right: 1px solid #d6d9dc; }
-
-#content { border-left: none; }
-}
-
-@-moz-document url-prefix("https://superuser.com/") {
-#left-sidebar {top: -70px; }
-}
