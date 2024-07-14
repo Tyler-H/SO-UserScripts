@@ -1,0 +1,178 @@
+@-moz-document url-prefix("https://stackoverflow.com/") {
+/* voting button color */
+button.js-vote-up-btn[aria-pressed="true"] svg.iconArrowUp path, button.js-vote-down-btn[aria-pressed="true"] svg.iconArrowDown path {
+    fill: rgb(244, 130, 37);
+}
+button.js-vote-up-btn:not([aria-pressed="true"]) svg.iconArrowUp path, button.js-vote-down-btn:not([aria-pressed="true"]) svg.iconArrowDown path {
+    fill: rgb(186, 191, 196);
+}
+
+/* site background color */
+body, .s-topbar, #content {
+    background-color: rgb(45, 45, 45);
+}
+/* code background color */
+pre.s-code-block, .answercell pre, pre:not(.CodeMirror-line) {
+    background-color: rgb(61, 61, 61) !important;
+}
+
+/* badge colors */
+/* gold badges */
+ul.s-user-card--awards li.-badges span:first-child span {
+    color: rgb(240, 180, 0) !important;
+}
+div.post-signature div.-flair span:nth-child(2) span.badge1 {
+    color: rgb(240, 180, 0) !important;
+}
+/* silver badges */
+ul.s-user-card--awards li.-badges span:nth-child(3) span {
+    color: rgb(153, 156, 159) !important;
+}
+div.post-signature div.-flair span:nth-child(4) span.badge2 {
+    color: rgb(153, 156, 159) !important;
+}
+/* bronze badges */
+ul.s-user-card--awards li.-badges span:nth-child(5) span {
+    color: rgb(171, 130, 95) !important;
+}
+div.post-signature div.-flair span:nth-child(6) span.badge3 {
+    color: rgb(171, 130, 95) !important;
+}
+
+/* tag colors */
+.post-tag {
+    color: rgb(156, 193, 219);
+    background-color: rgb(67, 84, 96);
+}
+
+/* text/link colors */
+#question-header .question-hyperlink {
+    color: rgb(207, 210, 214);
+}
+body.theme-dark {
+    color: rgb(231, 233, 235) !important;
+}
+a {
+    color: rgb(51, 167, 255);
+}
+a:hover {
+    color: rgb(50, 141, 210);
+}
+#mainbar a:visited {
+    color: hsl(210,95%,84%);
+}
+.s-post-summary .s-post-summary--content-title a, .s-post-summary .s-post-summary--content-title a:visited {
+    color: rgb(51, 167, 255);
+}
+.s-post-summary .s-post-summary--content-title a:hover {
+    color: rgb(50, 141, 210);
+}
+.user-info {
+    color: rgb(172, 179, 185);
+}
+.deleted-answer {
+    background-color: rgb(88, 48, 47);
+    border-top-color: rgb(114, 56, 55);
+}
+button.js-delete-post.deleted-post {
+    color: rgb(210, 95, 93) !important; /* needed to override !important on stylesheet */
+}
+button.js-delete-post.deleted-post:hover {
+    color: rgb(45, 45, 45) !important; /* needed to override !important on stylesheet */
+    background-color: rgb(210, 95, 93) !important; /* needed to override !important on stylesheet */
+}
+
+/* user card --not changed, but just in case they do change it */
+.post-signature.owner {
+    background-color: rgb(60,60,60);
+}
+
+/* post notices */
+.s-notice {
+    background-color: rgb(30, 68, 98);
+}
+.postcell aside.s-notice, .answercell aside.s-notice {
+    background-color: rgb(30, 68, 98);
+    border-color: rgb(30, 68, 98);
+}
+
+/* block quote area */
+blockquote {
+    background-color: rgb(71, 67, 54);
+}
+
+/* revisions page */
+.js-revisions > div.js-revision > div.bg-blue-100 { /* wish they would apply a more semantic class for "this is the OP's revision" other than .bg-blue-100 */
+    background-color: rgb(30, 68, 98) !important;
+}
+
+/* close question modal */
+#popup-close-question {
+    border-color: rgb(125, 133, 141);
+}
+div#popup-close-question form span[title="number of votes already cast"] {
+    background-color: rgb(51, 167, 255);
+}
+.popup-actions div button.js-popup-submit {
+    background-color: rgb(50, 141, 210);
+    color: white;
+}
+.s-radio:checked {
+    border: 4px solid rgb(54, 145, 215);
+}
+
+/* reputation and notification and answer/acceptance colors */
+/* notification colors */
+.s-activity-indicator {
+    color: white;
+}
+.s-activity-indicator__success {
+    background-color: rgb(89, 159, 110);
+}
+.s-activity-indicator__danger {
+    background-color: rgb(196, 81, 79);
+}
+/* notification menu bg */
+.topbar-dialog {
+    background-color: rgb(45, 45, 45);
+}
+.topbar-dialog li.unread-item.new-unread-notification-style {
+    background-color: rgb(66, 66, 66);
+}
+/* answer/acceptance colors */
+.s-post-summary .s-post-summary--stats-item.has-answers.has-accepted-answer {
+    background-color: rgb(89,159,110);
+    border-color: rgb(89,159,110);
+    color: white;
+}
+.s-post-summary .s-post-summary--stats-item.has-answers {
+    background-color: rgb(45, 45, 45);
+    border-color: rgb(89,159,110);
+    color: rgb(141, 206, 171);
+}
+/* progress bars */
+.s-progress:not(.s-progress__badge):not(.s-progress__privilege) .s-progress--bar {
+    background-color: rgb(94,186,125)
+}
+
+/* sidebars */
+.s-sidebarwidget {
+    background: rgb(55, 55, 55);
+}
+
+/* favorite/watched questions */
+.s-post-summary__watched:not(.s-post-summary__ignored) {
+    background-color: rgb(57, 57, 57) !important;
+}
+
+/* button color */
+.s-btn.s-btn__filled {
+    background-color: rgb(55,138,211) !important;
+    color: #fefefe !important;
+}
+
+/* new item in profile highlight */
+#rep-page-container .js-post-expandable-body > div > div.bg-yellow-200 {
+    background-color: rgb(57,57,57) !important;
+}
+}
