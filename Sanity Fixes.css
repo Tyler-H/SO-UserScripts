@@ -501,6 +501,19 @@ div[id^="question-summary-"].s-post-summary__ignored:hover {
 .snippet-code .snippet-result .snippet-result-code {
     height: 500px;
 }
+
+/* restoring font of title to Arial in pending edit review modal window */
+div.post-layout > div > div.diffs > div > div.markdown-diff .fs-title span {
+    font-family: Arial, sans-serif !important;
+}
+
+/* fixes bold tag and gives them a bit of size and shape again */
+.s-tag {
+    font-weight: 100 !important;
+    border-radius: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
 }
 
 @-moz-document url-prefix("https://stackoverflow.com/review/close/stats") {
