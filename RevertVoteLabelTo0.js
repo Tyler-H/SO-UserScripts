@@ -13,10 +13,15 @@
 // @match        https://*.mathoverflow.net/*
 // ==/UserScript==
 
-(function() {
-    //store all post score labels in a static NodeList
-    let allPostLabels = document.querySelectorAll("span[class*='js-exp-vote-zero']");
+window.addEventListener("load", function(event){
+    setTimeout(updatePostLabels, 50);
 
-    //loop through each post score label in the NodeList. Where the innerHTML equals "Vote", replace it with "0" instead.
-    allPostLabels.forEach ( x => x.innerHTML = x.innerHTML.replace('Vote','0'));
-})();
+    function updatePostLabels() {
+        //store all post score labels in a static NodeList
+        let allPostLabels = document.querySelectorAll("span[class*='js-exp-vote-zero']");
+
+        //loop through each post score label in the NodeList. Where the innerHTML equals "Vote", replace it with "0" instead.
+        allPostLabels.forEach ( x => x.innerHTML = x.innerHTML.replace('Vote','0'));
+        allPostLabels.forEach ( y => y.setAttribute('style', 'font-size: 21px !important'));
+    };
+});
