@@ -6,19 +6,19 @@
 #left-sidebar nav > ol.nav-links > li {
     display: none !important;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) {
+#left-sidebar nav > ol.nav-links > li:nth-child(1) { /* Should be Top Questions */
     display: block !important;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li.pb24:nth-child(5) {
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li.pb24:nth-child(6) {
     display: none !important; /* hides unnecessary space */
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(6) {
-    display: none !important; /* hides saves */
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(5) {
+    display: none !important; /* hides Saves */
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(8) {
-    display: none !important; /* hides Companies */   
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(7) {
+    display: none !important; /* hides Discussions */   
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(n + 9) {
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(n + 11) {
     display: none !important; /* hides everything else, like collectives and discussions */
 }
 #left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(1) > a > div > span {
@@ -34,7 +34,7 @@
     display: block;
     font-size: 13px;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(2) > a > div > span {
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(2) > a > div > span { /* Should be All Questions */
     order: 2;
     visibility: hidden;
     font-size: 1px;
@@ -47,14 +47,16 @@
     display: block;
     font-size: 13px;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(3) {
-    order: 3;
-}
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(4) {
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(4) { /* Should be Tags */
     order: 5;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(7) {
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(3) { /* Should be Staging Ground */
+    order: 6;
+}
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(8) { /* Should be Chat */
+    order: 3;
+}
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(10) { /* Should be Users */
     order: 4;
 }
-
 }
