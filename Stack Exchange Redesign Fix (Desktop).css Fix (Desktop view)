@@ -163,9 +163,18 @@ div.js-vote-count {
     display: none;
 }
 
-/* Restoring tag coloring on the edit page because why TF would it be different here */
+/* Restoring tag coloring on the edit page and tag suggestions dynamic window because why TF would it be different here */
 div.js-tag-editor span.s-tag {
     background-color: rgb(67, 84, 96);
     color:rgb(156, 193, 219);
+}
+div.tag-suggestions span.s-tag {
+    background-color: rgb(67, 84, 96);
+    color:rgb(156, 193, 219);
+}
+
+/* Removing inexplicable bold from tags on Meta */
+.post-tag:not(.s-tag) {
+    font-weight: 400 !important;
 }
 }
