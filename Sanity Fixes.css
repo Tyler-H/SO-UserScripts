@@ -1,4 +1,4 @@
-@-moz-document url-prefix("https://stackoverflow.com/c/socvr/"), domain("stackoverflow.com"), domain("stackexchange.com"), domain("serverfault.com"), domain("stackapps.com"), domain("superuser.com") {
+@-moz-document domain("stackoverflow.com"), domain("stackexchange.com"), domain("serverfault.com"), domain("stackapps.com"), domain("superuser.com"), url-prefix("https://stackoverflow.com/c/socvr/") {
 /* nobody wants to see ads */
 
 #hireme {
@@ -448,27 +448,27 @@ button.js-saves-btn > .svg-icon.js-saves-btn-selected path {
     top: 100px;
     z-index: 1; /* why... why did they set everything to z-index: 0 on 12/19/22?! */
 }
+/* Fixes the width of the tooltips which broke due to sticky positioning */
+div.js-voting-container button.js-vote-up-btn + div.s-popover[role="tooltip"] {
+    min-width: 150px;
+    text-align: center;
+    padding: 11px;
+}
+div.js-voting-container button.js-vote-down-btn + div.s-popover[role="tooltip"] {
+    min-width: 170px;
+    text-align: center;
+    padding: 11px;
+}
+.js-voting-container div.js-vote-count + div.s-popover[role="tooltip"] {
+    min-width: 217px;
+}
+button.js-saves-btn + div.s-popover {
+    min-width: 128px;
+}
+a.js-post-issue + div.s-popover {
+    min-width: 140px;
+}
 
-    /* Fixing the width of the tooltips thanks to sticky positioning */
-    div.js-voting-container button.js-vote-up-btn + div.s-popover[role="tooltip"] {
-        min-width: 150px;
-        text-align: center;
-        padding: 11px;
-    }
-    div.js-voting-container button.js-vote-down-btn + div.s-popover[role="tooltip"] {
-        min-width: 170px;
-        text-align: center;
-        padding: 11px;
-    }
-    .js-voting-container div.js-vote-count + div.s-popover[role="tooltip"] {
-        min-width: 217px;
-    }
-    button.js-saves-btn + div.s-popover {
-        min-width: 128px;
-    }
-    a.js-post-issue +div.s-popover {
-        min-width: 140px;
-    }
 
 /* reverting ugly styling of inbox */
 
@@ -514,6 +514,16 @@ div.post-layout > div > div.diffs > div > div.markdown-diff .fs-title span {
     padding-left: 7px;
     padding-right: 7px;
 }
+
+/* hides "recognized by" noise */
+div.post-signature div.affiliate-badge {
+    display: none;
+}
+
+/* Hiding bottom notice added on 2025-03-11 that repeats content already present on the page */
+.js-bottom-notice {
+    display: none !important;
+}
 }
 
 @-moz-document url-prefix("https://stackoverflow.com/review/close/stats") {
@@ -538,12 +548,10 @@ table.w100 tbody tr td.va-middle.p8 {
     padding: 0px !important;
 }
 
-/* hiding Sam's entry because he's a dirty fucking cheater */
-
-div.d-flex.ff-row-wrap > div.flex--item:nth-child(2) > table.w100 tr:nth-child(5) { /* Will need to update when Sam's position changes. */
+/* hiding Sam's entry in the Reviewers list because he's a dirty cheater */
+div.d-flex.ff-row-wrap > div.flex--item:nth-child(2) > table.w100 tr:nth-child(6) { /* Will need to update when Sam's position changes. */
     display: none;
 }
-
 }
 
 @-moz-document url-prefix("https://stackoverflow.com/users/") {
@@ -577,12 +585,18 @@ div.d-flex.ff-row-wrap > div.flex--item:nth-child(2) > table.w100 tr:nth-child(5
 @-moz-document url-prefix("https://stackoverflow.com/") {
 /* announcements box fix so it doesn't look like puke */
 
-.s-sidebarwidget__yellow .s-sidebarwidget--header {
+.s-sidebarwidget.s-sidebarwidget__yellow .s-sidebarwidget--header {
     background-color: #9e883b;
 }
 
 .s-sidebarwidget.s-sidebarwidget__yellow {
     background-color: #3d3d3d;
+}
+
+/* header sizing fix that broke on 2024-12-06 */
+.s-sidebarwidget__yellow .s-sidebarwidget--header {
+    padding: 12px;
+    padding-bottom: 8px;
 }
 }
 
