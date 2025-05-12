@@ -26,7 +26,7 @@
     visibility: hidden;
     font-size: 1px;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(1) > a > div > span::after {
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-of-type(1) > a > div > span::after { /* Should be Top Questions */
     content:"Top Questions"; /* replaces the span with more descriptive label */
     right:-50px;
     order: 1;
@@ -34,7 +34,7 @@
     display: block;
     font-size: 13px;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(2) > a > div > span { /* Should be All Questions */
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-of-type(2) > a > div > span { /* Should be All Questions */
     order: 2;
     visibility: hidden;
     font-size: 1px;
@@ -56,7 +56,10 @@
 #left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(8) { /* Should be Chat */
     order: 3;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(10) { /* Should be Users */
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-of-type(10) { /* Should be Users */
     order: 4;
 }
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-of-type(9) { /* hides Articles */
+    display: none !important;
+} 
 }
