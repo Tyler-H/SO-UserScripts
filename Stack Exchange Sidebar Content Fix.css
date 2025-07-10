@@ -9,16 +9,22 @@
 #left-sidebar nav > ol.nav-links > li:nth-child(1) { /* Should be Top Questions */
     display: block !important;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li.pb24:nth-child(6) {
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li.pb24:nth-child(8) {
     display: none !important; /* hides unnecessary space */
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(5) {
-    display: none !important; /* hides Saves */
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(3) {
+    display: none !important; /* hides AI Assist  */
 }
 #left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(7) {
-    display: none !important; /* hides Discussions */   
+    display: none !important; /* hides Saves */
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(n + 11) {
+/*#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(7) {
+    display: none !important; /* hides Discussions */   /* Update 2025-07-10 apparently Discussions isn't on the sidebar anymore? */
+/*}*/
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(9) {
+    display: none !important;
+}
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(n + 12) {
     display: none !important; /* hides everything else, like collectives and discussions */
 }
 #left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(1) > a > div > span {
@@ -47,19 +53,19 @@
     display: block;
     font-size: 13px;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(4) { /* Should be Tags */
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(6) { /* Should be Tags */
     order: 5;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(3) { /* Should be Staging Ground */
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(4) { /* Should be Staging Ground */
     order: 6;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(8) { /* Should be Chat */
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-child(9) { /* Should be Chat */
     order: 3;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-of-type(10) { /* Should be Users */
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-of-type(11) { /* Should be Users */
     order: 4;
 }
-#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-of-type(9) { /* hides Articles */
+#left-sidebar nav > ol.nav-links > li:nth-child(1) > ol.nav-links > li:nth-of-type(10) { /* hides Articles */
     display: none !important;
 } 
 }
